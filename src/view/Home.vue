@@ -5,8 +5,8 @@
       <h1>Amazing UI</h1>
       <h3>一个令人惊讶的ui框架</h3>
       <div class="actions">
-        <a>Github</a>
-        <a>开始</a> 
+        <a href="https://github.com/jiejie-coding/Amazing-ui">Github</a>
+        <router-link to="/doc">开始</router-link> 
       </div>
     </div>
   </div>
@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
+  width: 100%;
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -30,6 +31,7 @@ export default {
   > .actions{
     padding: 8px 0;
     a {
+      color: inherit;
       margin:0 8px;
       background: #fff;
       display: inline-block;
@@ -41,4 +43,4 @@ export default {
     }
   }
 }
-</style> 	</style> 
+</style> 	

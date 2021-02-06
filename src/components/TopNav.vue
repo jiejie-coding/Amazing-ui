@@ -10,6 +10,8 @@
 
 <style lang="scss" scoped>
 .topNav {
+  position: relative;
+    z-index: 10;
     border: 1px solid red;
     height: 48px;
     line-height: 48px;
