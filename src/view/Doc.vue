@@ -1,7 +1,7 @@
 <template>
    <div>
      <top-nav/>
-    <aside>
+    <aside v-if="asideVisible">
       <h2>侧边导航</h2>
       <ol>
         <li>1</li>
@@ -17,8 +17,13 @@
 
 <script lang='ts'>
 import TopNav from '../components/TopNav.vue';
+import { inject, Ref } from 'vue';
 export default {
-  components: {TopNav}
+  components: {TopNav},
+  setup() {
+    const asideVisible = inject<Ref<boolean>>('asideVisible');
+    return { asideVisible }
+  }
 }
 </script>
 

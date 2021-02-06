@@ -1,6 +1,6 @@
 <template>
   <div class="topNav">
-      <div class="logo">Amazing</div>
+      <div class="logo" @click="toggleAside">Amazing</div>
       <ul class="nav">
         <li>菜单1</li>
         <li>菜单2</li>
@@ -8,6 +8,19 @@
   </div>
 </template>
 
+<script lang="ts">
+import { inject, Ref } from 'vue';
+export default {
+  setup() {
+    const asideVisible = inject<Ref<boolean>>('asideVisible');
+    const toggleAside = () => {
+      asideVisible.value = !asideVisible.value;
+    }
+    return { toggleAside }
+  },
+ 
+}
+</script>
 <style lang="scss" scoped>
 .topNav {
   position: relative;
