@@ -2,12 +2,17 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
 import {createWebHashHistory, createRouter} from 'vue-router'
-import jiejie from './components/jiejie.vue'
+
+import Home from './view/Home.vue';
+import Doc from './view/Doc.vue';
+
 const history = createWebHashHistory()
 const router = createRouter({
   history: history,
   routes: [
-    {path: '/', component: jiejie}
+    {path: '/', redirect: '/home'},
+    {path: '/home', component: Home},
+    {path: '/doc', component: Doc}
   ]
 });
 
