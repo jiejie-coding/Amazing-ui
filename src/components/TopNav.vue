@@ -29,7 +29,7 @@ export default {
   width: 100%;
   z-index: 10;
   border: 1px solid red;
-  $h: 50px;
+  $h: 54px;
   height: $h;
   line-height: $h;
   padding: 0 20px;
