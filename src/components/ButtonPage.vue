@@ -1,7 +1,14 @@
 <template>
+  <h1>示例1</h1>
   <Button theme="button">你好</Button>
   <Button theme="link">你好</Button>
   <Button theme="text">你好</Button>
+  <h1>示例2</h1>
+  <div>
+    <Button size="big">大大大</Button>
+    <Button>普普通</Button>
+    <Button size="small">小小小</Button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -10,7 +17,7 @@ export default {
   components: {Button},
   setup() {
     const onClick = () => {
-      console.log(11)
+      // console.log(11)
     }
 
     return { onClick }
