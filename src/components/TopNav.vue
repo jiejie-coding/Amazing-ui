@@ -1,10 +1,13 @@
 <template>
   <div class="topNav">
     <span class="toggleSlide" @click="toggleAside">三</span>
-    <div class="logo"><router-link to="/home">Amazing</router-link></div>
+    <div class="logo"><router-link to="/home">
+      <svg class="icon">
+        <use xlink:href="#icon-amazing"></use>
+      </svg>
+    </router-link></div>
     <ul class="nav">
-      <li>菜单1</li>
-      <li>菜单2</li>
+      <li>文档</li>
     </ul>
   </div>
 </template>
@@ -28,7 +31,7 @@ export default {
   left: 0;
   width: 100%;
   z-index: 10;
-  border: 1px solid red;
+  //border: 1px solid red;
   $h: 54px;
   height: $h;
   line-height: $h;
@@ -62,5 +65,10 @@ export default {
       display: none;
     }
   }
+}
+.icon {
+  //padding-top: 12px;
+  width: 80px;
+  height: 60px;
 }
 </style>
