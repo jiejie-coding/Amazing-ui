@@ -1,7 +1,7 @@
 <template>
   <div class="topNav">
     <span class="toggleSlide" @click="toggleAside">三</span>
-    <div class="logo">Amazing</div>
+    <div class="logo"><router-link to="/home">Amazing</router-link></div>
     <ul class="nav">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -41,6 +41,9 @@ export default {
   > .logo {
     font-size: 24px;
     font-weight: 700;
+    > a {
+      color: inherit;
+    }
   }
   > .nav {
     display: flex;

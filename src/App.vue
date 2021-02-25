@@ -13,7 +13,6 @@ export default {
     provide("asideVisible", asideVisible);
     router.afterEach(() => {
       if (width < 550) {
-        console.log(1111);
         asideVisible.value = false;
       }
     });
