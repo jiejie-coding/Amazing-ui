@@ -1,12 +1,18 @@
 <template>
-  <button>
+  <button v-bind="$attrs" class="button" :class="`theme-${theme}`">
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
 export default {
-name: "Button"
+  inheritAttrs: false,
+  props: {
+    theme: {
+      type: String,
+      default: 'button'
+    }
+  }
 }
 </script>
 
