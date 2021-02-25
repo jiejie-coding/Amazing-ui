@@ -1,5 +1,5 @@
 <template>
-  <button  class="engineer-switch" @click="toggle" :class="{'engineer-checked':value}">
+  <button  @click="toggle" :class="{checked:value}">
     <span></span>
   </button>
 </template>
@@ -19,10 +19,10 @@ export default {
 </script>
 
 
-<style lang="scss">
-  $h: 22px;
+<style lang="scss" scoped>
+$h: 22px;
   $h2: $h - 4px;
-  .engineer-switch{
+  button{
     height: $h;
     width: $h*2;
     border: none;
@@ -30,22 +30,21 @@ export default {
     border-radius: $h/2;
     position: relative;
     outline: 0;
-    > span{
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      height: $h2;
-      width: $h2;
-      background:white;
-      border-radius: $h2 / 2;
-      transition: left 250ms;
-    }
-    &.engineer-checked{
-      background: blue;
-      > span {
-        left: calc(100% - #{$h2} - 2px);
-      }
-    }
   }
-
+  span{	
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $h2;
+    width: $h2;
+    background:white;
+    border-radius: $h2 / 2;
+    transition: left 250ms;
+  } 	  
+   button.checked{
+    background: blue;
+  }
+   button.checked > span {
+    left: calc(100% - #{$h2} - 2px);
+  }
 </style>
