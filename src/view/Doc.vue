@@ -5,8 +5,8 @@
       <aside v-if="asideVisible">
         <h2>侧边导航</h2>
         <ol>
-          <li><router-link to="/doc/switch">Switch</router-link></li>
-          <li>2</li>
+          <li><router-link to="/doc/switch">Switch组件</router-link></li>
+          <li><router-link to="/doc/button">Button组件</router-link></li>
           <li>3</li>
           <li>4</li>
           <li>5</li>
@@ -75,6 +75,9 @@ aside {
   > ol {
     > li {
       padding: 4px 0;
+      > a {
+        color: inherit;
+      }
     }
   }
 }
