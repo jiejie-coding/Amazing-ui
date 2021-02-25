@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$attrs" class="engineer-button" :class="classes">
+  <button v-bind="$attrs" class="engineer-button" :class="classes" :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -15,7 +15,11 @@ export default {
     size: {
       type: String,
       default: 'normal'
-    }
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup(props) {
     const { theme, size } = props;
@@ -87,6 +91,22 @@ export default {
       font-size: 12px;
       height: 20px;
       padding: 0 4px;
+    }
+
+    &.engineer-theme-button{
+      &[disabled] {
+        cursor: not-allowed;
+        color: grey;
+        &:hover {
+          border-color: grey;
+        }
+      }
+    }
+    &.engineer-theme-link, &.engineer-theme-text {
+      &[disabled] {
+        cursor: not-allowed;
+        color: grey;
+      }
     }
   }
 </style>
