@@ -1,6 +1,7 @@
 <template>
   <div>
      <Switch v-model:value="bool"/>
+     <Switch v-model:value="bool1" disabled />
   </div>
 </template>
 
@@ -11,7 +12,8 @@ export default {
   components: {Switch},
   setup(){
     const bool = ref(false)
-    return { bool }
+    const bool1 = ref(false)
+    return { bool,bool1 }
   }
 }
 </script>
