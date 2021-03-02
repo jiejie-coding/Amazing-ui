@@ -1,7 +1,7 @@
 <template>
   <Tabs>
-    <Tab>第一个</Tab>
-    <Tab>第二个</Tab>
+    <Tab title="导航1">第一个</Tab>
+    <Tab title="导航2">第二个</Tab>
   </Tabs>
 </template>
 
