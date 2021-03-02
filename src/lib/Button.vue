@@ -35,11 +35,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'engineer.scss';
   $h: 32px;
-  $border-color: #d9d9d9;
-  $color: #333;
-  $blue: #40a9ff;
   $radius: 4px;
+
   .engineer-button {
     box-sizing: border-box;
     height: $h;
@@ -50,10 +49,9 @@ export default {
     align-items: center;
     white-space: nowrap;
     background: white;
-    color: $color;
-    border: 1px solid $border-color;
+    color: #333;
+    border: 1px solid $--color-primary;
     border-radius: $radius;
-    box-shadow: 0 1px 0 fade-out(black, 0.95);
     outline: none;
     & + & {
       margin-left: 8px;
@@ -61,21 +59,34 @@ export default {
 
     &:hover,
     &:focus {
-      color: $blue;
-      border-color: $blue;
+      color: $--color-selected;
+      border-color: $--color-selected;
+    }
+
+    &.engineer-theme-radius{
+      color: inherit;
+      border-radius: $h/2;
+      &.engineer-size-big{
+        border-radius: 24px;
+      }
+      &.engineer-size-small{
+        border-radius: 10px;
+      }
+      &:hover,&:focus {
+        color: $--color-selected;
+        border-color: $--color-selected;
+      }
     }
 
     &.engineer-theme-link{
       border-color: transparent;
-      box-shadow: none;
-      color: $blue;
+      color: $--color-selected;
       &:hover,&:focus{
-        color: lighten($blue, 10%);
+        color: lighten($--color-selected, 10%);
       }
     }
     &.engineer-theme-text{
       border-color: transparent;
-      box-shadow: none;
       color: inherit;
       &:hover,&:focus{
         background: darken(white, 5%);;
