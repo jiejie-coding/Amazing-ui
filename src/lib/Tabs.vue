@@ -7,7 +7,7 @@
         v-for="(title,index) in titles" 
         :key="index" :class="{'selected': title===selected}"
         @click="toggle(title)"
-        :ref="el => {if(el) navItems[index] = el}">{{title}}</div>
+        :ref="el => {if(title === selected) selectedItem = el}">{{title}}</div>
         <div class="Amazing-tabs-nav-underline" ref="underline"></div>
     </div>
     <div class="Amazing-tabs-content">
@@ -28,16 +28,12 @@ export default {
     }
   },
   setup(props,context) {
-    const navItems = ref<HTMLDivElement[]>([]);
+    const selectedItem = ref<HTMLDivElement>(null);
     const underline = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
     const xxx = () => {
-      const divs = navItems.value;
-      const result = divs.filter(div => {
-        return div.classList.contains('selected');
-      })[0];
       
-      const { width,left:left1 } = result.getBoundingClientRect();
+      const { width,left:left1 } = selectedItem.value.getBoundingClientRect();
       underline.value.style.width = width + 'px';
 
       const { left:left2 } = container.value.getBoundingClientRect();
@@ -60,7 +56,7 @@ export default {
     let toggle = function(title) {
       context.emit('update:selected',title);
     }
-    return { defaults,titles,toggle,navItems,underline,container }
+    return { defaults,titles,toggle,selectedItem,underline,container }
   }
 }
 </script>
