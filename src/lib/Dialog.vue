@@ -51,8 +51,7 @@ export default {
       }
     }
     const cancel = ()=> {
-      console.log(111);
-      
+      // console.log(111);
       if(props.cancel?.() !== false) {
         close();
       }

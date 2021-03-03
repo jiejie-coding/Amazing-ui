@@ -1,7 +1,7 @@
 <template>
   <h1>实例1</h1>
   <Button @click="toggle">点击弹出对话框</Button>
-  <Dialog v-model:visible="x" :closeOnOverlay="true" :ok="f1" :cancel="f2">
+  <Dialog v-model:visible="visible" :closeOnOverlay="true" :ok="f1" :cancel="f2">
     <template v-slot:title>提示</template>
     <template v-slot:content>这是一条提示信息</template>
   </Dialog>
@@ -15,9 +15,9 @@ import { ref } from 'vue';
 export default {
   components: {Dialog,Button},
   setup() {
-    const x = ref(false);
+    const visible = ref(false);
     const toggle = ()=> {
-      x.value = !x.value;
+      visible.value = !visible.value;
     }
     const f1 = () => {
       // console.log("f1");
@@ -29,7 +29,7 @@ export default {
     }
 
 
-    return { x,toggle,f1,f2 }
+    return { visible,toggle,f1,f2 }
   }
 }
 </script>
