@@ -3,13 +3,20 @@
     <top-nav class="nav" />
     <div class="content">
       <aside v-if="asideVisible">
-        <h2>侧边导航</h2>
+        <h2>文档页</h2>
+        <ol>
+          <li><router-link to="/doc/intro">介绍</router-link></li>
+          <li><router-link to="/doc/install">安装</router-link></li>
+          <li><router-link to="/doc/start-use">开始使用</router-link></li>
+
+        </ol>
+        <h2>组件列表</h2>
         <ol>
           <li><router-link to="/doc/switch">Switch 开关</router-link></li>
           <li><router-link to="/doc/button">Button 按钮</router-link></li>
           <li><router-link to="/doc/dialog">Dialog 对话框</router-link></li>
           <li><router-link to="/doc/tabs">Tabs 标签页</router-link></li>
-          <li>5</li>
+  
         </ol>
       </aside>
       <main>
