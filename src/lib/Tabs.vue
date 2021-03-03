@@ -1,12 +1,14 @@
+
 <template>
 
   <div class="Amazing-tabs">
-    <div class="Amazing-tabs-nav">
+    <div class="Amazing-tabs-nav" ref="container">
       <div class="Amazing-tabs-nav-item" 
         v-for="(title,index) in titles" 
         :key="index" :class="{'selected': title===selected}"
-        @click="toggle(title)">{{title}}</div>
-        <div class="Amazing-tabs-nav-underline"></div>
+        @click="toggle(title)"
+        :ref="el => {if(el) navItems[index] = el}">{{title}}</div>
+        <div class="Amazing-tabs-nav-underline" ref="underline"></div>
     </div>
     <div class="Amazing-tabs-content">
       <component class="Amazing-tabs-content-item" v-for="(content,index) in defaults" :is="content" :key="index" 
@@ -18,6 +20,7 @@
 
 <script lang="ts">
 import Tab from './Tab.vue';
+import { onMounted, onUpdated, ref } from 'vue';
 export default {
   props: {
     selected: {
@@ -25,6 +28,24 @@ export default {
     }
   },
   setup(props,context) {
+    const navItems = ref<HTMLDivElement[]>([]);
+    const underline = ref<HTMLDivElement>(null);
+    const container = ref<HTMLDivElement>(null);
+    const xxx = () => {
+      const divs = navItems.value;
+      const result = divs.filter(div => {
+        return div.classList.contains('selected');
+      })[0];
+      
+      const { width,left:left1 } = result.getBoundingClientRect();
+      underline.value.style.width = width + 'px';
+
+      const { left:left2 } = container.value.getBoundingClientRect();
+      const left = left2 - left1;
+      underline.value.style.left = -left + 'px';
+    }
+    onMounted(xxx)
+    onUpdated(xxx)
     
     const defaults = context.slots.default();
     defaults.forEach(tag => {
@@ -39,7 +60,7 @@ export default {
     let toggle = function(title) {
       context.emit('update:selected',title);
     }
-    return { defaults,titles,toggle }
+    return { defaults,titles,toggle,navItems,underline,container }
   }
 }
 </script>
