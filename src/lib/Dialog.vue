@@ -1,23 +1,38 @@
 <template>
-  <div class="Amazing-dialog-overlay"></div>
-  <div class="Amazing-dialog-wrapper">
-    <div class="Amazing-dialog">
-      <header>提示<span class="Amazing-dialog-close"></span></header>
-      <main>
-        这是一则提示信息
-      </main>
-      <footer>
-        <Button>取消</Button>
-        <Button theme="grey">确认</Button>
-      </footer>
+  <template v-if="visible">
+    <div class="Amazing-dialog-overlay"></div>
+    <div class="Amazing-dialog-wrapper">
+      <div class="Amazing-dialog">
+        <header>提示<span class="Amazing-dialog-close" @click="close"></span></header>
+        <main>
+          这是一则提示信息
+        </main>
+        <footer>
+          <Button>取消</Button>
+          <Button theme="grey">确认</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 
 <script lang="ts">
 import Button from './Button.vue';
 export default {
-  components: { Button }
+  components: { Button },
+  props: {
+    visible: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup(props, context) {
+    const close = () => {
+      context.emit('update:visible', !props.visible);
+    }
+
+    return { close }
+  }
 }
 </script>
 
