@@ -1,6 +1,6 @@
 <template>
   <template v-if="visible">
-    <div class="Amazing-dialog-overlay"></div>
+    <div class="Amazing-dialog-overlay" @click="closeOnOverlay"></div>
     <div class="Amazing-dialog-wrapper">
       <div class="Amazing-dialog">
         <header>提示<span class="Amazing-dialog-close" @click="close"></span></header>
@@ -8,8 +8,8 @@
           这是一则提示信息
         </main>
         <footer>
-          <Button>取消</Button>
-          <Button theme="grey">确认</Button>
+          <Button @click="cancel">取消</Button>
+          <Button theme="grey" @click="ok">确认</Button>
         </footer>
       </div>
     </div>
@@ -24,14 +24,41 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    },
+    closeOnOverlay: {
+      type: Boolean,
+      default: true
+    },
+    ok: {
+      type: Function,
+    },
+    cancel: {
+      type: Function
     }
   },
   setup(props, context) {
     const close = () => {
       context.emit('update:visible', !props.visible);
     }
+    const closeOnOverlay = () => {
+      if(props.closeOnOverlay) {
+        close();
+      }
+    }
+    const ok = ()=> {
+      if(props.ok?.() !== false) {
+        close();
+      }
+    }
+    const cancel = ()=> {
+      console.log(111);
+      
+      if(props.cancel?.() !== false) {
+        close();
+      }
+    }
 
-    return { close }
+    return { close,closeOnOverlay,ok,cancel }
   }
 }
 </script>
