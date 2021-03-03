@@ -31,8 +31,7 @@ export default {
     const selectedItem = ref<HTMLDivElement>(null);
     const underline = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
-    const xxx = () => {
-      
+    const upderlineIssue = () => {
       const { width,left:left1 } = selectedItem.value.getBoundingClientRect();
       underline.value.style.width = width + 'px';
 
@@ -40,8 +39,8 @@ export default {
       const left = left2 - left1;
       underline.value.style.left = -left + 'px';
     }
-    onMounted(xxx)
-    onUpdated(xxx)
+    onMounted(upderlineIssue)
+    onUpdated(upderlineIssue)
     
     const defaults = context.slots.default();
     defaults.forEach(tag => {

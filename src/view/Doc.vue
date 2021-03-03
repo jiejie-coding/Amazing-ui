@@ -5,10 +5,10 @@
       <aside v-if="asideVisible">
         <h2>侧边导航</h2>
         <ol>
-          <li><router-link to="/doc/switch">Switch组件</router-link></li>
-          <li><router-link to="/doc/button">Button组件</router-link></li>
-          <li><router-link to="/doc/dialog">Dialog组件</router-link></li>
-          <li><router-link to="/doc/tabs">Tabs组件</router-link></li>
+          <li><router-link to="/doc/switch">Switch 开关</router-link></li>
+          <li><router-link to="/doc/button">Button 按钮</router-link></li>
+          <li><router-link to="/doc/dialog">Dialog 对话框</router-link></li>
+          <li><router-link to="/doc/tabs">Tabs 标签页</router-link></li>
           <li>5</li>
         </ol>
       </aside>
