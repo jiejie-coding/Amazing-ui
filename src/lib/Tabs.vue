@@ -94,7 +94,8 @@ $border-color: #d9d9d9;
       left: 0;
       bottom: 0;
       height: 3px;
-      background-color: red;
+      background-color: $--color-selected;
+      transition: all 250ms;
     }
   }
   &-content {
