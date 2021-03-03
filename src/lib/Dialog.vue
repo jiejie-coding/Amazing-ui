@@ -3,9 +3,9 @@
     <div class="Amazing-dialog-overlay" @click="closeOnOverlay"></div>
     <div class="Amazing-dialog-wrapper">
       <div class="Amazing-dialog">
-        <header>提示<span class="Amazing-dialog-close" @click="close"></span></header>
+        <header><slot name="title"><span class="Amazing-dialog-close" @click="close"></span></header>
         <main>
-          这是一则提示信息
+          <slot name="content"/>
         </main>
         <footer>
           <Button @click="cancel">取消</Button>
