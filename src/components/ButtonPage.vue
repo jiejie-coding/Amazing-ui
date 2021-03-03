@@ -36,6 +36,11 @@
       <Button theme="text" disabled>禁用文本按钮</Button>
     </div>
   </div>
+
+  <h1>示例4</h1>
+  <Button theme="grey">普通按钮</Button>
+  <Button theme="red">圆角按钮</Button>
+  <Button theme="green">链接按钮</Button>
 </template>
 
 <script lang="ts">

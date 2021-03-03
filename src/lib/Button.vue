@@ -37,12 +37,13 @@ export default {
 <style lang="scss">
 @import 'engineer.scss';
   $h: 32px;
-  $radius: 4px;
+  $radius: 3px;
 
   .engineer-button {
     box-sizing: border-box;
     height: $h;
-    padding: 0 12px;
+    line-height: $h;
+    padding: 16px;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
@@ -90,6 +91,33 @@ export default {
       color: inherit;
       &:hover,&:focus{
         background: darken(white, 5%);;
+      }
+    }
+
+    &.engineer-theme-grey{
+      border-color: transparent;
+      color: #fff;
+      background-color: #909399;
+      &:hover,&:focus{
+        background:#A6A9AD;
+      }
+    }
+
+    &.engineer-theme-green{
+      border-color: transparent;
+      color: #fff;
+      background-color: #6DC442;
+      &:hover,&:focus{
+        background: #85CE61;
+      }
+    }
+
+    &.engineer-theme-red{
+      border-color: transparent;
+      color: #fff;
+      background-color: #F56C6C;
+      &:hover,&:focus{
+        background: #F78989;
       }
     }
 
