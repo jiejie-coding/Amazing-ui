@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .router-link-active {
-  color: red
+  background-color: #fff;
 }
 .layout {
   display: flex;
@@ -73,20 +73,28 @@ export default {
 }
 aside {
   background: lightblue;
-  width: 150px;
+  width: 20%;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
   > h2 {
-    margin-bottom: 4px;
+    margin: 20px 0;
+    text-align: left;
+    padding-left: 15%;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      // border: 1px solid red;
+      margin-top: 10px;
       > a {
+        // height: 32px;
+        line-height: 36px;
+        display: block;
         color: inherit;
+        padding: 4px 0 0 20%;
+        text-align: left;
       }
     }
   }
