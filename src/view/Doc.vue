@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <top-nav class="nav" />
+    <top-nav class="nav" prefix="doc"/>
     <div class="content">
       <aside v-if="asideVisible">
         <h2>文档页</h2>
@@ -16,7 +16,6 @@
           <li><router-link to="/doc/button">Button 按钮</router-link></li>
           <li><router-link to="/doc/dialog">Dialog 对话框</router-link></li>
           <li><router-link to="/doc/tabs">Tabs 标签页</router-link></li>
-  
         </ol>
       </aside>
       <main>
@@ -42,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .router-link-active {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, .3);
 }
 .layout {
   display: flex;
@@ -54,7 +53,7 @@ export default {
   > .content {
     flex-grow: 1;
     padding-top: 60px;
-    padding-left: 156px;
+    padding-left: 20%;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -72,13 +71,17 @@ export default {
   }
 }
 aside {
-  background: lightblue;
+  background: #fff;
+  color: #131313;
   width: 20%;
+  min-width: 200px;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
+  border-right: 1px solid #ccc;
+  z-index: 8;
   > h2 {
     margin: 20px 0;
     text-align: left;
@@ -95,6 +98,10 @@ aside {
         color: inherit;
         padding: 4px 0 0 20%;
         text-align: left;
+        // transition: all .2s;
+        // &:hover {
+        //   transform: translateX(10px);
+        // }
       }
     }
   }

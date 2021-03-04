@@ -3,7 +3,7 @@
     <div class="Amazing-dialog-overlay" @click="closeOnOverlay"></div>
     <div class="Amazing-dialog-wrapper">
       <div class="Amazing-dialog">
-        <header><slot name="title"><span class="Amazing-dialog-close" @click="close"></span></header>
+        <header><slot name="title"/><span class="Amazing-dialog-close" @click="close"></span></header>
         <main>
           <slot name="content"/>
         </main>
@@ -69,8 +69,8 @@ $border-color: #d9d9d9;
   background: white;
   border-radius: $radius;
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,.2);
-  min-width: 24em;
-  max-width: 90%;
+  min-width: 18em;
+  // max-width: 90%;
 
   &-overlay {
     position: fixed;
