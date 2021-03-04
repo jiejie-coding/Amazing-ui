@@ -2,11 +2,13 @@
   <div>
     <top-nav/>
     <div class="banner">
-      <h1>Amazing UI</h1>
-      <h3>一个适合初级前端学习的ui框架</h3>
+      <h1>
+        <img src="../assets/imgs/logo.png"/>
+      </h1>
       <div class="actions">
+        <router-link to="/home">home</router-link>
         <a href="https://github.com/jiejie-coding/Amazing-ui">Github</a>
-        <router-link to="/doc">起步</router-link>
+        <router-link to="/doc">start</router-link>
       </div>
     </div>
   </div>
@@ -22,34 +24,41 @@ export default {
 <style lang="scss" scoped>
 .banner {
   width: 100%;
-  padding: 100px 0;
+  padding: 120px 0px 60px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  //background: pink;
-  background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
-  //background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
-  //background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  //background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
-  //background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
-  clip-path: ellipse(80% 60% at 50% 40%);
+  background-color: #131313;
+  color: #fff;
   > h3 {
     margin: 15px 0;
   }
   > .actions{
-    padding: 8px 0;
-    a {
-      color: inherit;
-      margin:0 8px;
+    padding: 50px 0;
+    font: 16px Arial, Helvetica, sans-serif;
+    font-family: 'Teko', sans-serif;
+    
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    & :first-child {
+      color: #666;
       background: #fff;
-      display: inline-block;
-      $h: 35px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
-      padding: 0px 15px;
+    
     }
+    a {
+      color: #fff;
+      display: inline-block;
+      margin:0 20px;
+      padding: 10px 15px;
+      transition: all .2s;
+      &:hover {
+        background-color: #fff;
+        color: #131313;
+        
+      }
+    }
+    
   }
 }
 </style> 	
