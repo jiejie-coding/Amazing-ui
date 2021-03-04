@@ -3,7 +3,7 @@ import App from './App.vue'
 import './lib/engineer.scss'
 import './index.scss'
 import router from './router'
-
+import 'github-markdown-css';
 
 const app = createApp(App)
 app.use(router)
