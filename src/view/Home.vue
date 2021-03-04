@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-nav/>
+    <top-nav prefix="home"/>
     <div class="banner">
       <h1>
         <img src="../assets/imgs/logo.png"/>
@@ -38,7 +38,6 @@ export default {
     padding: 50px 0;
     font: 16px Arial, Helvetica, sans-serif;
     font-family: 'Teko', sans-serif;
-    
     text-transform: uppercase;
     letter-spacing: .2px;
     & :first-child {
