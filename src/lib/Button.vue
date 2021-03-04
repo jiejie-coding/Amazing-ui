@@ -55,7 +55,7 @@ export default {
     border-radius: $radius;
     outline: none;
     & + & {
-      margin-left: 8px;
+      margin-left: 24px;
     }
 
     &:hover,
