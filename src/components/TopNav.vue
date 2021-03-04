@@ -1,13 +1,14 @@
 <template>
   <div class="topNav">
     <span class="toggleSlide" @click="toggleAside">三</span>
-    <div class="logo"><router-link to="/home">
-      <svg class="icon">
-        <use xlink:href="#icon-amazing"></use>
-      </svg>
-    </router-link></div>
+    <!-- <div class="logo"><router-link to="/home">
+  
+    </router-link></div> -->
     <ul class="nav">
-      <li>文档</li>
+      <li class="nav-search">
+        <input class="nav-input nav-search-item" />
+        <span class="ico-search nav-search-item">+</span>
+      </li>
     </ul>
   </div>
 </template>
@@ -30,28 +31,40 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  //border: 1px solid red;
-  $h: 54px;
+  $h: 80px;
   height: $h;
-  line-height: $h;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
+  padding: 10px 30px;
+
+  background-color: transparent;
+  
   > .toggleSlide {
     display: none;
   }
-  > .logo {
-    font-size: 24px;
-    font-weight: 700;
-    > a {
-      color: inherit;
-    }
-  }
+
   > .nav {
-    display: flex;
+    margin-top: 30px;
+    float: right;
     > li {
-      margin-left: 20px;
+      margin-right: 20px;
+    }
+    > .nav-search {
+      > .nav-search-item {
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 15px;
+      }
+      > .nav-input {
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        outline: none;
+      }
+      > .ico-search {
+        display: inline-block;
+        width: 40px;
+        border: 1px solid #fff;
+        background-color: #fff;
+      }
     }
   }
   @media (max-width: 550px) {
@@ -65,10 +78,5 @@ export default {
       display: none;
     }
   }
-}
-.icon {
-  //padding-top: 12px;
-  width: 80px;
-  height: 60px;
 }
 </style>
