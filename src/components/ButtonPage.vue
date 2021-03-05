@@ -1,62 +1,36 @@
 <template>
-  <h1>示例1</h1>
-  <Button theme="button">普通按钮</Button>
-  <Button theme="radius">圆角按钮</Button>
-  <Button theme="link">链接按钮</Button>
-  <Button theme="text">文本按钮</Button>
-  <h1>示例2</h1>
-  <div>
-    <div>
-      <Button size="big">大号普通按钮</Button>
-      <Button>中号普通按钮</Button>
-      <Button theme="button" size="small">小号普通按钮</Button>
-    </div>
-    <div>
-      <Button theme="radius" size="big">大号圆角边框</Button>
-      <Button theme="radius">中号圆角边框</Button>
-      <Button theme="radius" size="small">小号圆角边框</Button>
-    </div>
-    <div>
-      <Button theme="link" size="big">大号链接按钮</Button>
-      <Button theme="link">普通链接按钮</Button>
-      <Button size="small" theme="link">小号链接按钮</Button>
-    </div>
-    <div>
-      <Button size="big" theme="text">大号文本按钮</Button>
-      <Button theme="text">普通文本按钮</Button>
-      <Button size="small" theme="text">小号文本按钮</Button>
-    </div>
-  </div>
-  <h1>实例3</h1>
-  <div>
-    <div>
-      <Button disabled>禁用普通按钮</Button>
-      <Button theme="radius" disabled>禁用圆角按钮</Button>
-      <Button theme="link" disabled>禁用链接按钮</Button>
-      <Button theme="text" disabled>禁用文本按钮</Button>
-    </div>
-  </div>
-
-  <h1>示例4</h1>
-  <Button theme="grey">普通按钮</Button>
-  <Button theme="red">圆角按钮</Button>
-  <Button theme="green">链接按钮</Button>
+<div class="wrapper">
+  <h1>Button组件</h1>
+  <p>定义了一些Button组件，在页面需要的时候导入</p>
+  <Demo :component="ButtonDemo1" />
+  <Demo :component="ButtonDemo2" />
+  <Demo :component="ButtonDemo3" />
+  <Demo :component="ButtonDemo4" />
+</div>
 </template>
 
 <script lang="ts">
-import Button from '../lib/Button.vue';
-export default {
-  components: {Button},
-  setup() {
-    const onClick = () => {
-      // console.log(11)
-    }
+import Demo from './Demo.vue';
 
-    return { onClick }
+import ButtonDemo1 from '../user/ButtonDemo1.vue';
+import ButtonDemo2 from '../user/ButtonDemo2.vue';
+import ButtonDemo3 from '../user/ButtonDemo3.vue';
+import ButtonDemo4 from '../user/ButtonDemo4.vue';
+export default {
+  components: { Demo },
+  setup() {
+    return { ButtonDemo1,ButtonDemo2,ButtonDemo3,ButtonDemo4 }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+$border-color: #d9d9d9;
+.wrapper {
+  text-align: left;
+  padding: 30px 10px;
+  p {
+    padding: 30px 0;
+  }
+}
 </style>

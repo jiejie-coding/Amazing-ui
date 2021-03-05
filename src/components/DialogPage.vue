@@ -1,39 +1,32 @@
 <template>
-  <h1>实例1</h1>
-  <Button @click="toggle">点击弹出对话框</Button>
-  <Dialog v-model:visible="visible" :closeOnOverlay="true" :ok="f1" :cancel="f2">
-    <template v-slot:title>提示</template>
-    <template v-slot:content>这是一条提示信息</template>
-  </Dialog>
+<div class="wrapper">
+  <h1>Diolog组件</h1>
+  <p>定义了一些Button组件，在页面需要的时候导入</p>
+  <Demo :component="DialogDemo1" />
+  <Demo :component="DialogDemo2" />
+</div>
 </template>
 
 <script lang="ts">
-import Dialog from '../lib/Dialog.vue';
-import Button from '../lib/Button.vue';
-import { ref } from 'vue';
+import DialogDemo1 from '../user/DialogDemo1.vue';
+import DialogDemo2 from '../user/DialogDemo2.vue';
+import Demo from './Demo.vue';
 
 export default {
-  components: {Dialog,Button},
+  components: { Demo, DialogDemo1, DialogDemo2 },
   setup() {
-    const visible = ref(false);
-    const toggle = ()=> {
-      visible.value = !visible.value;
-    }
-    const f1 = () => {
-      // console.log("f1");
-      // return false
-    }
-
-    const f2 = ()=> {
-      // console.log("f2");
-    }
-
-
-    return { visible,toggle,f1,f2 }
+    return { DialogDemo1,DialogDemo2 }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+$border-color: #d9d9d9;
+.wrapper {
+  text-align: left;
+  padding: 30px 10px;
+  p {
+    padding: 30px 0;
+  }
+}
 </style>
