@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <top-nav class="nav" prefix="doc"/>
+    <top-nav class="nav" prefix="doc" />
     <div class="content">
       <aside v-if="asideVisible">
         <h2>文档页</h2>
@@ -8,7 +8,6 @@
           <li><router-link to="/doc/intro">介绍</router-link></li>
           <li><router-link to="/doc/install">安装</router-link></li>
           <li><router-link to="/doc/start-use">开始使用</router-link></li>
-
         </ol>
         <h2>组件列表</h2>
         <ol>
@@ -41,12 +40,13 @@ export default {
 
 <style lang="scss" scoped>
 .router-link-active {
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .layout {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
   > .nav {
     flex-shrink: 0;
   }
@@ -60,6 +60,8 @@ export default {
   }
 }
 .content {
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   > aside {
     flex-shrink: 0;
@@ -106,5 +108,4 @@ aside {
     }
   }
 }
-
 </style> 
