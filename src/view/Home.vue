@@ -95,6 +95,7 @@ export default {
   flex-wrap: wrap;
   > li {
     padding: 20px;
+    width: 330px;
     display: flex;
     align-items: center;
     > span {
