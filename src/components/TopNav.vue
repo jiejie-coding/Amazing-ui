@@ -1,6 +1,10 @@
 <template>
   <div class="topNav" :class="prefix && `${prefix}-topNav`">
-    <span class="toggleSlide" @click="toggleAside">三</span>
+    <span class="toggleSlide" @click="toggleAside">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-liebiao"></use>
+      </svg>
+    </span>
     <div class="logo">
       <router-link to="/home">AmazingUI</router-link>
     </div>
@@ -60,7 +64,6 @@ export default {
     border: 1px solid #fff;
     background-color: #fff;
   }
-  
 }
 </style>
 
@@ -87,7 +90,6 @@ export default {
     background-color: #131313;
     color: #fff;
   }
-
 }
 </style>
 <style lang="scss" scoped>
@@ -112,6 +114,10 @@ export default {
   }
   > .toggleSlide {
     display: none;
+    > .icon {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   > .nav {
