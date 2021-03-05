@@ -27,7 +27,7 @@ export default {
     },
     closeOnOverlay: {
       type: Boolean,
-      default: true
+      default: false
     },
     ok: {
       type: Function,
@@ -51,7 +51,6 @@ export default {
       }
     }
     const cancel = ()=> {
-      // console.log(111);
       if(props.cancel?.() !== false) {
         close();
       }

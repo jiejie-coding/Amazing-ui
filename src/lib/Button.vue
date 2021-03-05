@@ -73,6 +73,9 @@ export default {
       &.engineer-size-small{
         border-radius: 10px;
       }
+      // &[disabled] {
+      //   cursor: not-allowed;
+      // }
       &:hover,&:focus {
         color: $--color-selected;
         border-color: $--color-selected;
@@ -132,7 +135,7 @@ export default {
       padding: 0 4px;
     }
 
-    &.engineer-theme-button{
+    &.engineer-theme-button, &.engineer-theme-radius{
       &[disabled] {
         cursor: not-allowed;
         color: grey;
