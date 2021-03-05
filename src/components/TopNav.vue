@@ -7,7 +7,18 @@
     <ul class="nav">
       <li class="nav-search">
         <input class="nav-input nav-search-item" />
-        <span class="ico-search nav-search-item">+</span>
+        <span class="ico-search nav-search-item">
+          <span v-if="prefix === 'home'">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-search-copy"></use>
+            </svg>
+          </span>
+          <span v-else-if="prefix === 'doc'">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </span>
+        </span>
       </li>
     </ul>
   </div>
@@ -49,11 +60,12 @@ export default {
     border: 1px solid #fff;
     background-color: #fff;
   }
+  
 }
 </style>
 
 <style lang="scss" scoped>
-  .doc-topNav {
+.doc-topNav {
   border-bottom: 1px solid #ccc;
   background-color: #fff;
   > .logo {
@@ -75,6 +87,7 @@ export default {
     background-color: #131313;
     color: #fff;
   }
+
 }
 </style>
 <style lang="scss" scoped>
@@ -96,7 +109,6 @@ export default {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
-    
   }
   > .toggleSlide {
     display: none;

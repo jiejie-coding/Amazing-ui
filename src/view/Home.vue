@@ -11,6 +11,34 @@
         <router-link to="/doc">start</router-link>
       </div>
     </div>
+    <div>
+      <ul class="features">
+        <li>
+           <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shejishi"></use>
+            </svg>
+            <span>Excellent UI design</span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-Vue"></use>
+            </svg>
+            <span>A Vue Component Library</span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-typescript"></use>
+            </svg>
+            <span>Based on typescript</span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-ai-code"></use>
+            </svg>
+            <span>Simple code</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -58,6 +86,26 @@ export default {
       }
     }
     
+  }
+}
+.features {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > li {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    > span {
+      margin-left: 20px;
+      
+    }
+  }
+
+  .icon {
+    width: 68px;
+    height: 68px;
   }
 }
 </style> 	
