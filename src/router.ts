@@ -19,6 +19,7 @@ const router = createRouter({
     {path: '/home', component: Home},
     {path: '/doc', component: Doc,
      children: [
+       {path: '', component:Intro},
        {path: 'intro', component: Intro},
        {path: 'install', component: Install},
        {path: 'start-use', component: StartUse},

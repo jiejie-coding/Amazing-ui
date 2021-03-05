@@ -142,7 +142,7 @@ export default {
       }
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 700px) {
     > .toggleSlide {
       display: block;
       float: left;

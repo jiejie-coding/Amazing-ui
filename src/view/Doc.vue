@@ -54,14 +54,14 @@ export default {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 20%;
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       padding-left: 0;
     }
+  
   }
 }
 .content {
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   display: flex;
   > aside {
     flex-shrink: 0;
@@ -70,19 +70,24 @@ export default {
     flex-grow: 1;
     padding: 16px;
     background: white;
+    overflow: auto;
   }
 }
 aside {
   background: #fff;
   color: #131313;
   width: 20%;
-  min-width: 200px;
+  
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
   border-right: 1px solid #ccc;
+  @media (max-width: 700px) {
+    // width: 30%;
+      min-width: 200px;
+    }
   z-index: 8;
   > h2 {
     margin: 20px 0;
