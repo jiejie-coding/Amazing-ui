@@ -1,6 +1,5 @@
 
 <template>
-
   <div class="Amazing-tabs">
     <div class="Amazing-tabs-nav" ref="container">
       <div class="Amazing-tabs-nav-item" 
@@ -63,7 +62,7 @@ export default {
 
 
 <style lang="scss">
-@import './engineer.scss';
+@import './amazing.scss';
 $color: #333;
 $border-color: #d9d9d9;
 .Amazing-tabs {
@@ -81,6 +80,7 @@ $border-color: #d9d9d9;
       }
       &.selected {
         color: $--color-selected;
+        font-weight: 700;
       }
     }
     &-underline {
