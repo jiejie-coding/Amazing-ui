@@ -4,9 +4,9 @@
 
 <template>
   <div>
-    <Button theme="grey">普通按钮</Button>
-    <Button theme="red">圆角按钮</Button>
-    <Button theme="green">链接按钮</Button>
+    <Button theme="grey">灰色按钮</Button>
+    <Button theme="red">红色按钮</Button>
+    <Button theme="green">绿色按钮</Button>
   </div>
 </template>
 

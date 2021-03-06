@@ -24,7 +24,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@import 'engineer.scss';
+@import 'amazing.scss';
   $h: 22px;
   $h2: $h - 4px;
   button{
