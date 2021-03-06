@@ -1,5 +1,5 @@
 <template>
-  <button v-bind="$attrs" class="engineer-button" :class="classes" :disabled="disabled">
+  <button v-bind="$attrs" class="Amazing-button" :class="classes" :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -25,8 +25,8 @@ export default {
     const { theme, size } = props;
     const classes = computed (() => {
       return {
-        [`engineer-theme-${theme}`]: theme,
-        [`engineer-size-${size}`]: size,
+        [`Amazing-theme-${theme}`]: theme,
+        [`Amazing-size-${size}`]: size,
       }
     })
     return { classes }
@@ -35,11 +35,11 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'engineer.scss';
+@import 'amazing.scss';
   $h: 32px;
   $radius: 3px;
 
-  .engineer-button {
+  .Amazing-button {
     box-sizing: border-box;
     height: $h;
     line-height: $h;
@@ -54,6 +54,9 @@ export default {
     border: 1px solid $--color-primary;
     border-radius: $radius;
     outline: none;
+    &[disabled] {
+        cursor: not-allowed;
+    }
     & + & {
       margin-left: 24px;
     }
@@ -64,32 +67,30 @@ export default {
       border-color: $--color-selected;
     }
 
-    &.engineer-theme-radius{
+    &.Amazing-theme-radius{
       color: inherit;
       border-radius: $h/2;
-      &.engineer-size-big{
+      &.Amazing-size-big{
         border-radius: 24px;
       }
-      &.engineer-size-small{
+      &.Amazing-size-small{
         border-radius: 10px;
       }
-      // &[disabled] {
-      //   cursor: not-allowed;
-      // }
+      
       &:hover,&:focus {
         color: $--color-selected;
         border-color: $--color-selected;
       }
     }
 
-    &.engineer-theme-link{
+    &.Amazing-theme-link{
       border-color: transparent;
       color: $--color-selected;
       &:hover,&:focus{
         color: lighten($--color-selected, 10%);
       }
     }
-    &.engineer-theme-text{
+    &.Amazing-theme-text{
       border-color: transparent;
       color: inherit;
       &:hover,&:focus{
@@ -97,7 +98,7 @@ export default {
       }
     }
 
-    &.engineer-theme-grey{
+    &.Amazing-theme-grey{
       border-color: transparent;
       color: #fff;
       background-color: #909399;
@@ -106,7 +107,7 @@ export default {
       }
     }
 
-    &.engineer-theme-green{
+    &.Amazing-theme-green{
       border-color: transparent;
       color: #fff;
       background-color: #6DC442;
@@ -115,7 +116,7 @@ export default {
       }
     }
 
-    &.engineer-theme-red{
+    &.Amazing-theme-red{
       border-color: transparent;
       color: #fff;
       background-color: #F56C6C;
@@ -124,31 +125,15 @@ export default {
       }
     }
 
-    &.engineer-size-big{
+    &.Amazing-size-big{
       font-size: 24px;
       height: 48px;
       padding: 0 16px
     }
-    &.engineer-size-small{
+    &.Amazing-size-small{
       font-size: 12px;
       height: 20px;
       padding: 0 4px;
-    }
-
-    &.engineer-theme-button, &.engineer-theme-radius{
-      &[disabled] {
-        cursor: not-allowed;
-        color: grey;
-        &:hover {
-          border-color: grey;
-        }
-      }
-    }
-    &.engineer-theme-link, &.engineer-theme-text {
-      &[disabled] {
-        cursor: not-allowed;
-        color: grey;
-      }
     }
   }
 </style>
