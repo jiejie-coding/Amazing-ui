@@ -14,28 +14,36 @@
     <div>
       <ul class="features">
         <li>
+          
+          <span class="features-text">feature: one</span>
            <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-shejishi"></use>
             </svg>
-            <span>Excellent UI design</span>
+            <span class="features-text">Excellent UI design</span>
         </li>
         <li>
+          
+          <span class="features-text">feature: two</span>
           <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-Vue"></use>
             </svg>
-            <span>A Vue Component Library</span>
+            <span class="features-text">A Vue Component Library</span>
         </li>
         <li>
+          
+          <span class="features-text">feature: three</span>
           <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-typescript"></use>
             </svg>
-            <span>Based on typescript</span>
+            <span class="features-text">Based on typescript</span>
         </li>
         <li>
+          <span class="features-text">feature: four</span>
           <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-ai-code"></use>
             </svg>
-            <span>Simple code</span>
+            
+            <span class="features-text">Simple code</span>
         </li>
       </ul>
     </div>
@@ -94,12 +102,23 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   > li {
-    padding: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
     width: 330px;
     display: flex;
     align-items: center;
-    > span {
-      margin-left: 20px;
+    border: 1px dashed #ccc;
+    margin: 10px;
+    > .features-text {
+      text-align: left;
+      margin: 20px;
+      font: 16px Arial, Helvetica, sans-serif;
+      font-family: 'Teko', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .2px;
       
     }
   }

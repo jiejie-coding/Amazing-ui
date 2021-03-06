@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './lib/engineer.scss'
+import './lib/amazing.scss'
 import './index.scss'
 import router from './router'
 import 'github-markdown-css';
