@@ -5,7 +5,7 @@
   然后根据下面的代码导入需要的组件
 
 ```js
-import {Button, Tabs, Switch, Dialog} from "amazing-ui-233"
+import {Button, Tabs, Switch, Dialog} from "Amazing-ui-233"
 ```
 
   这允许您使用我提供的组件。
@@ -21,7 +21,7 @@ import {Button, Tabs, Switch, Dialog} from "amazing-ui-233"
   </div>
 </template>
 <script>
-  import {Button, Tabs, Switch, Dialog} from "king-ui"
+  import {Button, Tabs, Switch, Dialog} from "Amazing-ui-233"
   export default {
     components: {Button}
   }
