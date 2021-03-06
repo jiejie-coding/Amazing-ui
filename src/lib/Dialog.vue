@@ -69,8 +69,6 @@ $border-color: #d9d9d9;
   border-radius: $radius;
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,.2);
   min-width: 18em;
-  // max-width: 90%;
-
   &-overlay {
     position: fixed;
     top: 0;
