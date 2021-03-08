@@ -60,10 +60,10 @@ $border-color: #d9d9d9;
     padding: 16px;
   }
   &-actions {
-    padding: 8px 16px;
     border-top: 1px dashed $border-color;
     &-toggle {
-      text-align: center;
+    padding: 8px 16px;
+      
     }
   }
   &-code {

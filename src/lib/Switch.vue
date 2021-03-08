@@ -49,6 +49,9 @@ export default {
       transition: left 250ms;
       
     }
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
    	  
   button.amazing-checked{
