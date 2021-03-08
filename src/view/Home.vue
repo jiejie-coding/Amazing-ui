@@ -151,12 +151,6 @@ export default {
       width: 68px;
       height: 68px;
     }
-    @media (max-width:900px) {
-      li {
-        width: 100%;
-      }
-      
-    }
   }
 }
 </style> 	
