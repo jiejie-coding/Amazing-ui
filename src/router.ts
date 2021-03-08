@@ -10,6 +10,8 @@ import TabsPage from './components/TabsPage.vue';
 import Intro from './components/Intro.vue';
 import Install from './components/Install.vue';
 import StartUse from './components/StartUse.vue';
+import ToastPage from './components/ToastPage.vue';
+
 
 const history = createWebHashHistory()
 const router = createRouter({
@@ -28,7 +30,7 @@ const router = createRouter({
        {path: 'button', component: ButtonPage},
        {path: 'dialog', component: DialogPage},
        {path: 'tabs', component: TabsPage},
-       
+       {path: 'toast', component: ToastPage}
      ]}
   ]
 });
