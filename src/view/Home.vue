@@ -99,11 +99,12 @@ export default {
     }
     &-item {
       position: relative;
-      padding: 10px 20px;
       margin: 15px;
       z-index: 1;
       > a {
         color: #fff;
+        display: block;
+        padding: 10px 20px;
       }
       &::after {
         position: absolute;
@@ -135,6 +136,7 @@ export default {
   justify-content: center;
   > li {
     padding: 20px;
+    width: 240px;
     .features-text {
       color: #131313;
       &-title {
@@ -148,6 +150,12 @@ export default {
     > .icon {
       width: 68px;
       height: 68px;
+    }
+    @media (max-width:900px) {
+      li {
+        width: 100%;
+      }
+      
     }
   }
 }
