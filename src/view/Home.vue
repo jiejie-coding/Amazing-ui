@@ -47,7 +47,6 @@
           </div>
         </li>
         <li>
-          <!-- <span class="features-text">feature: four</span> -->
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-ai-code"></use>
           </svg>

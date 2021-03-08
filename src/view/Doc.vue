@@ -31,7 +31,6 @@ export default {
   components: { TopNav },
   setup() {
     const asideVisible = inject<Ref<boolean>>("asideVisible");
-
     return { asideVisible };
   },
 };
@@ -40,7 +39,9 @@ export default {
 
 <style lang="scss" scoped>
 .router-link-active {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: fade-out($color: #131313, $amount: 0.3);
+  color: #fff;
+  border-right: 4px solid #131313;
 }
 .layout {
   display: flex;
@@ -85,7 +86,6 @@ aside {
   height: 100%;
   border-right: 1px solid #ccc;
   @media (max-width: 700px) {
-    // width: 30%;
       min-width: 200px;
     }
   z-index: 8;
@@ -96,19 +96,13 @@ aside {
   }
   > ol {
     > li {
-      // border: 1px solid red;
       margin-top: 10px;
       > a {
-        // height: 32px;
         line-height: 36px;
         display: block;
         color: inherit;
         padding: 4px 0 0 20%;
         text-align: left;
-        // transition: all .2s;
-        // &:hover {
-        //   transform: translateX(10px);
-        // }
       }
     }
   }
