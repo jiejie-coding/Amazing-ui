@@ -1,5 +1,5 @@
 <template>
-  <button  @click="toggle" :class="{'amazing-checked':value}" :disabled="disabled">
+  <button  @click="toggle" :class="{'Amazing-checked':value}" :disabled="disabled" class="Amazing-switch">
     <span></span>
   </button>
 </template>
@@ -27,7 +27,7 @@ export default {
 @import 'amazing.scss';
   $h: 22px;
   $h2: $h - 4px;
-  button{
+  .Amazing-switch {
     height: $h;
     width: $h*2;
     border: none;
@@ -54,7 +54,7 @@ export default {
     }
   }
    	  
-  button.amazing-checked{
+  .Amazing-checked{
     background: $--color-selected;
       &:active{
         > span {

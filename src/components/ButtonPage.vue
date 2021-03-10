@@ -6,6 +6,7 @@
     <Demo :component="ButtonDemo2" />
     <Demo :component="ButtonDemo3" />
     <Demo :component="ButtonDemo4" />
+    <Demo :component="ButtonDemo5" />
     <Attribute :data="data" />
   </div>
 </template>
@@ -17,6 +18,7 @@ import ButtonDemo1 from "../user/ButtonDemo1.vue";
 import ButtonDemo2 from "../user/ButtonDemo2.vue";
 import ButtonDemo3 from "../user/ButtonDemo3.vue";
 import ButtonDemo4 from "../user/ButtonDemo4.vue";
+import ButtonDemo5 from "../user/ButtonDemo5.vue";
 import Attribute from "../components/Attribute.vue";
 
 export default {
@@ -43,10 +45,17 @@ export default {
         type: "String",
         select: " disabled / 不传",
         default: " 不传 ",
+      },
+      {
+        params: "loading",
+        desc: "加载中",
+        type: "Boolean",
+        select: " true / false",
+        default: " false ",
       }
     ];
 
-    return { ButtonDemo1, ButtonDemo2, ButtonDemo3, ButtonDemo4, data };
+    return { ButtonDemo1, ButtonDemo2, ButtonDemo3, ButtonDemo4, ButtonDemo5, data };
   },
 };
 </script>

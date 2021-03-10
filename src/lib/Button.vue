@@ -1,5 +1,6 @@
 <template>
   <button v-bind="$attrs" class="Amazing-button" :class="classes" :disabled="disabled">
+    <span class="Amazing-button-loading" v-if="loading"/>
     <slot/>
   </button>
 </template>
@@ -21,6 +22,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    loading: {
+      type: Boolean,
+      default: false
+    }
   },
   setup(props) {
     const { theme, size } = props;
@@ -41,13 +46,16 @@ export default {
   $radius: 3px;
 
   .Amazing-button {
+    
     box-sizing: border-box;
     height: $h;
+    line-height: $h;
     padding: 16px;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin: 5px 0;
     white-space: nowrap;
     background: white;
     color: #333;
@@ -74,7 +82,7 @@ export default {
         border-radius: 24px;
       }
       &.Amazing-size-small{
-        border-radius: 10px;
+        border-radius: 16px;
       }
       
       &:hover,&:focus {
@@ -128,12 +136,32 @@ export default {
     &.Amazing-size-big{
       font-size: 24px;
       height: 48px;
-      padding: 0 16px
+      line-height: 48px;
+      // padding: 0 16px
     }
     &.Amazing-size-small{
       font-size: 12px;
       height: 20px;
-      padding: 0 4px;
+      line-height: 20px;
+      // padding: 4px;
+    }
+    > .Amazing-button-loading {
+      width: 14px;
+      height: 14px;
+      background-color: transparent;
+      border: 2px solid $--color-selected;
+      border-bottom: transparent;
+      border-radius: 50%;
+      margin-right: 4px;
+      animation: .5s Amazing-loading infinite linear;
+    }
+    @keyframes Amazing-loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 </style>
