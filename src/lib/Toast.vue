@@ -24,7 +24,7 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .Amazing-toast {
   position: fixed;
   color: #fff;

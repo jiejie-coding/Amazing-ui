@@ -46,12 +46,12 @@ export default {
       }
     }
     const ok = ()=> {
-      if(props.ok?.() !== false) {
+      if(props.ok && props.cancel() !== false) {
         close();
       }
     }
     const cancel = ()=> {
-      if(props.cancel?.() !== false) {
+      if(props.cancel && props.cancel() !== false) {
         close();
       }
     }
@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
 .Amazing-dialog {

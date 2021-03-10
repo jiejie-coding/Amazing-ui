@@ -20,7 +20,7 @@
     <div>
       <ul class="features">
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-shejishi"></use>
           </svg>
           <div class="features-text">
@@ -29,7 +29,7 @@
           </div>
         </li>
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-Vue"></use>
           </svg>
           <div class="features-text">
@@ -38,7 +38,7 @@
           </div>
         </li>
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-typescript"></use>
           </svg>
           <div class="features-text">
@@ -47,7 +47,7 @@
           </div>
         </li>
         <li>
-          <svg class="icon" aria-hidden="true">
+          <svg class="icon">
             <use xlink:href="#icon-ai-code"></use>
           </svg>
 

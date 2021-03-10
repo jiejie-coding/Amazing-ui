@@ -23,7 +23,7 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import 'amazing.scss';
   $h: 22px;
   $h2: $h - 4px;

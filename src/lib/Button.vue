@@ -7,6 +7,7 @@
 <script lang="ts">
 import { computed  } from 'vue';
 export default {
+  inheritAttrs: false,
   props: {
     theme: {
       type: String,
@@ -42,7 +43,6 @@ export default {
   .Amazing-button {
     box-sizing: border-box;
     height: $h;
-    line-height: $h;
     padding: 16px;
     cursor: pointer;
     display: inline-flex;
